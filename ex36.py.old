@@ -1,0 +1,30 @@
+from sys import exit
+
+
+# variables
+prompt = "> "
+
+
+# functions 
+def einde(lol):
+    print lol, "GET REKT!"
+    exit(0)
+
+
+def begin():
+    print "Marijn is slecht."
+    print "Hoe ga je hem dit vertellen?"
+    print "\t* mail"
+    print "\t* app"
+    
+    volgende = str(raw_input(prompt))
+    
+    if volgende == "mail":
+        print "Ben jij wel competent genoeg om een mail te sturen?"
+        print "Je mail is gestuurd met het adres k3lover@ponies.tv."  
+    elif volgende == "app":
+    
+    else:
+        einde("Zelfs Marijn had hier een antwoord op kunnen geven.")
+    
+begin()

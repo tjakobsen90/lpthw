@@ -1,0 +1,65 @@
+print       echo, uitprinten, laten zien (explicit \n)
+""          tekst grensen
+''          tekst grensen
+#           commentaar plaatsen
++           toevoegen, optellen
+-           aftrekken, afnemen
+/           delen
+*           vermedigvuldigen
+%           rest waarde
+<           kleiner dan
+>           groter dan
+<=          kleiner of gelijk dan
+>=          groter of gelijk dan
+,           scheiding tussen waardes
+variable    een waarde zoals string, integer, floating point
+# -*- coding: utf-8 -*-     script in UNICODE-8
+# -- coding: utf-8 --       script in UNICODE-8
+%s      formatter voor een string
+%d      formatter voor een integer
+%f      formatter voor een floating point
+%r      formatter voor rawdata (alles)
+%       begin opsomming van de formatter-waarders
+round() afronden van een getal, haalt het cijfer achter de comma weg, rond dus niet af naar boven of beneden
+=       gelijk als
+==      exact als
+TRUE  of  FALSE     waarde is aan/uit
+()      opsommingen meerdere waarders
+""" """     exacte tekst, alles tussen deze grensen wordt exact geprint
+''' '''     exacte tekst, alles tussen deze grensen wordt exact geprint
+\n      print een new-line, ASCII linefeed (LF)
+\t      print een tab, ASCII horizontal tab (TAB)
+\\      print een \
+\       escape-character in een print
+\'      print een '
+\"      print een "
+\a      ASCII bell (BEL), maakt geluid
+\b      ASCII backspace (BS) used either to erase the last character printed or to overprint it.
+\f      ASCII formfeed (FF) to cause a printer to eject paper to the top of the next page, or a video terminal to clear the screen.
+\N{name} character named name in unicode database (unicode only)
+\r      ASCII carriage return (CR), used as the end of line marker
+\uxxxx  character with 16-bit hex value (unicode only)
+\Uxxxxxxxx  character with 32bit hex value (unicode only)
+\v      ASCII vertical tab (VT)
+\oxx    character wih octal value
+\xhh    character with hex value
+while   terwijl, zolang, als het
+raw_input()     ruwe input, vergelijkbaar met %r, wordt niet direct gekoppeld aan een integer, floating point of string
+int()   zet de waarde om naar een integer
+input() probeert de waarde te classiferen, heeft security issues
+from sys import argv  importeer van het systeem, de waarde argv (wordt meegegeven in de paramaters van het commando)
+!!! f
+open(f)     , w (write), r (read), a (append) | w+ r+ a+ f in read and write mode, opent een bestand
+f.read() leest een bestand
+f.close() sluit een bestand
+f.truncate() verkleint de grootte van het bestand naar de optimale groote
+from os.path import exists  kijk of een bestand bestaat in het besturingssysteem pad
+exsists(f)  bestaat het bestand? T/F
+len()  wat is de lengte van de waarde
+def f():  het aanmaken van een function (mini script)
+f.seek()  zoek in bestand naar lijn nummer
+f.readline() lees de lijnnummer van een bestand
++=  kankertroep... x = x + y --> x += y
+f.write() lees een bestand
+float() maak van de waarde een floating point
+f.rewind() zet de lijnnummer van het bestand naar 0/boven

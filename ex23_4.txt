@@ -1,0 +1,2 @@
+https://github.com/zedshaw/python-lust
+https://github.com/zedshaw/lamson
