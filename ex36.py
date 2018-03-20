@@ -1,9 +1,11 @@
+#key is not working
+
 from sys import exit
 
 
 #variables
 prompt = "> "
-key = 0
+key = False
 buildings = ['blacksmith', 'inn', 'gate', 'go back']
 
 #functions
@@ -23,7 +25,7 @@ def gate():
         print "You are heading back to the square."
         square()
     elif "open" in next or "open the gate" in next:
-        if key == 1:
+        if key == True:
             print "You open the gate."
             print "A troll sees you and tries to kills you with his mace."
             #fight()
@@ -65,7 +67,7 @@ def square():
 def home():
     print "You are home."
     
-    if key == 0:
+    if key == False:
         print "There is a key on the table."
         print "What would you like to do?"
         print "\t* Grab key\n\t* Leave the house"
@@ -74,7 +76,8 @@ def home():
     
         if "grab key" in next or "grab" in next or "key" in next:
             print "You take the key, put it in your pocket and are heading outside."
-            key == 1
+            key = True
+            return key
             village()
         elif "leave the house" in next or "leave" in next:
             print "You leave the house."
