@@ -30,8 +30,7 @@ for word in urlopen(WORD_URL).readlines():
 	WORDS.append(word.strip())
 
 def convert(snippet, phrase):
-	class_names = [w.capitalize() for w in
-		random.sample(WORDS, snippet.count("%%%"))]
+	class_names = [w.capitalize() for w in random.sample(WORDS, snippet.count("%%%"))]
 	other_names = random.sample(WORDS, snippet.count("***"))
 	results = []
 	param_names = []
@@ -67,13 +66,13 @@ try:
 
 		for snippet in snippets:
 			phrase = PHRASES[snippet]
-			question, answer = convert(snippet, phrase)
+			results = convert(snippet, phrase)
 			if PHRASE_FIRST:
-				question, answer = answer, question
+				results = answer, question
 
-			print question
+			print results
 
 			raw_input("> ")
-			print "ANSWER: %s\n\n" % answer
+			print "ANSWER: %s\n\n" % results
 except EOFError:
 	print "\nBye"
