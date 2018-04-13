@@ -21,13 +21,14 @@ PHRASES = {
 }
 
 # do they want to drill phrases first
-PHRASE_FIRST = False
-if len(sys.argv) == 2 and sys.argv[1] == "english":
-	PHRASE_FIRST = TRUE
+#PHRASE_FIRST = False
+#if len(sys.argv) == 2 and sys.argv[1] == "english":
+PHRASE_FIRST = True
 
 # load up the words from the website
 for word in urlopen(WORD_URL).readlines():
 	WORDS.append(word.strip())
+
 
 def convert(snippet, phrase):
 	class_names = [w.capitalize() for w in random.sample(WORDS, snippet.count("%%%"))]
@@ -39,8 +40,8 @@ def convert(snippet, phrase):
 		param_count = random.randint(1,3)
 		param_names.append(', '.join(random.sample(WORDS, param_count)))
 
-		for sentence in snippet, phrase:
-			result = sentence[:]
+	for sentence in snippet, phrase:
+		result = sentence[:]
 
 		# fake class names
 		for word in class_names:
@@ -58,21 +59,22 @@ def convert(snippet, phrase):
 
 	return results
 
+
 # keep going until they hit CTRL-D
 try:
 	while True:
 		snippets = PHRASES.keys()
 		random.shuffle(snippets)
-
 		for snippet in snippets:
+			print snippet
 			phrase = PHRASES[snippet]
-			results = convert(snippet, phrase)
+			question, answer = convert(snippet, phrase)
 			if PHRASE_FIRST:
-				results = answer, question
+				question, answer = answer, question
 
-			print results
+			print question
 
 			raw_input("> ")
-			print "ANSWER: %s\n\n" % results
+			print "ANSWER: %s\n\n" % answer
 except EOFError:
 	print "\nBye"
