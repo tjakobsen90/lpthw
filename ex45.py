@@ -1,0 +1,4 @@
+- character with hp, atk and def, he also has a bag
+- monsters with hp, atk and def
+- start in small village with an quest to kill a monster that terrorizes town
+- areas: woods, cave, underground lake, big monster. each areas has sub-areas
