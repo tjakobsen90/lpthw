@@ -1,0 +1,8 @@
+Using the skeleton dir
+
+1. make a copy of the skeleton dir, name it after your new project
+2. rename all NAME modules to be the name of your project
+3. edit your setup.py to have all information
+4. rename tests/NAME__tests.py to also have the module name
+5. run nosetests
+6. begin :-)
