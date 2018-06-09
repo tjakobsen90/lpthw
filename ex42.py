@@ -7,24 +7,24 @@ class Dog(Animal):
 
 	def __init__(self, name):
 	## class dog has-a __init__ that takes self and name parameters
-	self.name = name
+		self.name = name
 
 ## make a class named cat that is an animal
 class Cat(Animal):
 
 	def __init__(self, name):
 	## class cat has-a __init__that takes self and name parameters
-	self.name = name
+		self.name = name
 
 ##  make a class named person that is an object
 class Person(object):
 
 	def __init__(self, name):
 	## class person has-a __init__ that takes self and name parameters
-	self.name = name
+		self.name = name
 
 	## Person has-a pet of some kind
-	self.pet = None
+		self.pet = None
 
 ## make a class named employee that has-a __init__ that takes self, name and salary as parameters
 class Employee(Person):
