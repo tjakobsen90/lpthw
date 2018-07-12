@@ -1,4 +1,4 @@
-o#Own made game for excersise 45 of LPTHW by Zed Shaw.
+#Own made game for excersise 45 of LPTHW by Zed Shaw.
 
 # Import modules
 from sys import exit
@@ -116,12 +116,23 @@ class Map(object):
 		'square': Square(),
 		'inn': Inn(),
 		'gate': Gate(),
+		'monsters': [
+			Troll(
+				hp=10,
+			),
+			{
+				'type': 'troll',
+			},
+		],
 		'forest': Foest(),
 		'cave': Cave(),
 		'underwater_lake': Underwater_lake(),
 		'monster_room': Monster_room(),
 		'death': Death()
 	}
+
+# list kunnen in dic's en vica-versa
+# dic's can be nested {{}}
 
 	def __init__(self, start_scene):
 		self.start_scene = start_scene
