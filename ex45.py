@@ -1,4 +1,4 @@
-o#Own made game for excersise 45 of LPTHW by Zed Shaw.
+#Own made game for excersise 45 of LPTHW by Zed Shaw.
 
 # Import modules
 from sys import exit
